@@ -19,29 +19,44 @@
 <body>
 <div class="border">
 	<div style="margin-left: 10%"><h1>Register Here</h1></div><br>
-	<form action="registerDone.php" method="post">
+	<form action="<?php echo base_url().'welcome' ?>" method="post">
 		 <div class="row" style="margin-left: 10%">
 		<div class="col-sm-2"><label class="control-label  for="pwd">First Name:</label></div>
-		<div class="col-sm-6"><input type="text" name="fname" class="form-control" placeholder="Enter Your First Name"></div>
+		<div class="col-sm-6">
+			<input type="text" name="fname" class="form-control" placeholder="Enter Your First Name">
+			<?php echo form_error('fname'); ?>
+		</div>
 	</div><br>
 	<div class="row" style="margin-left: 10%">
 		<div class="col-sm-2"><label class="control-label  for="pwd">Last Name:</label></div>
-		<div class="col-sm-6"><input type="text" name="lname" class="form-control" placeholder="Enter Your Last Name"></div>
+		<div class="col-sm-6">
+			<input type="text" name="lname" class="form-control" placeholder="Enter Your Last Name">
+			<?php echo form_error('lname'); ?>
+		</div>
 	</div>
 	<br>
 	<div class="row" style="margin-left: 10%">
 	    <div class="col-sm-2"><label class="control-label  for="pwd">Mobile NO.:</label></div>
-		<div class="col-sm-6"><input type="text" name="mobile" class="form-control" placeholder="Enter Your Mobile Number"></div>
+		<div class="col-sm-6">
+			<input type="text" name="mobile" class="form-control" placeholder="Enter Your Mobile Number">
+			<?php echo form_error('mobile'); ?>
+		</div>
 	</div>
 	<br>
 	<div class="row" style="margin-left: 10%">
 		 <div class="col-sm-2"><label class="control-label  for="pwd">E-Mail:</label></div>
-		<div class="col-sm-6"><input type="email" name="email" class="form-control" placeholder="Example@gmail.com"></div>
+		<div class="col-sm-6">
+			<input type="email" name="email" class="form-control" placeholder="Example@gmail.com">
+			<?php echo form_error('email'); ?>
+		</div>
 	</div>
 	<br>
 	<div class="row" style="margin-left: 10%">
 		<div class="col-sm-2"><label class="control-label  for="pwd">Password:</label></div>
-		<div class="col-sm-6"><input type="Password" name="password" class="form-control" placeholder="Enter Your Password"></div>
+		<div class="col-sm-6">
+			<input type="Password" name="password" class="form-control" placeholder="Enter Your Password">
+			<?php echo form_error('password'); ?>
+		</div>
 	</div><br>
 	<div class="row" style="margin-left: 10%">
 		<div class="col-sm-2">

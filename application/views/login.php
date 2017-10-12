@@ -18,11 +18,14 @@
 </head>
 <body >
 <div class="border">
-	<form action="loginDone.php" method="post">
+	<form action="<?php echo base_url().'welcome/login' ?>" method="post">
 		<div style="margin-left: 10%"><h1>Login Here</h1></div><br>
 	<div class="row" style="margin-left: 10%">
 		 <div class="col-sm-2"><label class="control-label  for="pwd">E-Mail:</label></div>
-		<div class="col-sm-6"><input type="email" name="email" class="form-control" placeholder="Example@gmail.com"></div>
+		<div class="col-sm-6">
+			<input type="email" name="email" class="form-control" placeholder="Example@gmail.com">
+			<?php echo form_error('email'); ?>
+		</div>
 	</div>
 	<br>
 	<div class="row" style="margin-left: 10%">
