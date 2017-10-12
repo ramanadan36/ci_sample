@@ -1,5 +1,5 @@
 <?php
-
+// Just making nothing
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
