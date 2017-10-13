@@ -6,6 +6,8 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('save_data_model');
+		$this->load->helper('url');
+
 	}
 
 	public function _login_rule()
@@ -43,8 +45,17 @@ class Welcome extends CI_Controller {
 
 	public function home()
 	{
-		$this->load->view('home.php');
+		$this->load->view('home');
 	}
+	public function profile()
+	{
+		$this->load->view('profile');
+	}
+	public function addmoredetail()
+	{
+		$this->load->view('addmoredetail');
+	}
+
 
 }
 

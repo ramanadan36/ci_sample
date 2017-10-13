@@ -1,0 +1,85 @@
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 5%;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 35px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.header{
+    height: 100px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+    background-color: #77A244;
+    
+}
+.float_right{
+    float: right;
+}
+.float_left{
+    float: left;
+    margin-top: 1%;
+}
+.open_nev{
+    font-size:30px;
+    cursor:pointer;margin-left: 2%;
+    margin-top: 2%;
+}
+.main{
+    width: 50%;
+    height: 100%;
+    border-style: solid;
+    margin-left: 25%;
+    margin-top: 2%;
+    border-color: green;
+}
+.image{
+    width: 150px;height: 150px; border-style: dashed; margin-left: 3%; margin-top: 1%;margin-bottom: 1%;
+}
+
+.border
+        {
+            border-style: solid;
+            border-color: green;
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+
+.register_left_margin{
+            margin-left: 10%;
+        }
+    

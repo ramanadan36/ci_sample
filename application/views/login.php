@@ -4,17 +4,8 @@
 	<title>Login</title>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<style type="text/css">
-
-		.border
-		{
-			border-style: solid;
-			border-color: green;
-			width: 60%;
-			margin-left: 20%;
-			margin-top: 10%;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/css1.css">
+	
 </head>
 <body >
 <div class="border">
