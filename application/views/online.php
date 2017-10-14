@@ -31,11 +31,11 @@
 
 <div class="main">
     <div class="row">
-    	<div class="col-sm-6 image"></div>
+    	<div class="col-sm-6">
+            <h2>Welcome</h2>   
+        </div>
     	<div class="col-sm-6" >
-    	    <h2>Welcome</h2>
-    	    <h4>User Mail-ID:</h4>
-    	    <h4>User Name: </h4>
+    	    
     	</div>
     </div>
 </div>

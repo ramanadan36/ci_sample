@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/css1.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="<?php echo base_url (); ?>assets/js1/js1.js"></script>
+    
 <body>
 </head>
 <body>
@@ -22,8 +23,8 @@
                 <a href="<?php echo base_url().'welcome/home' ?>">Home</a>
                 <a href="<?php echo base_url().'welcome/profile' ?>">Profile</a>
                 <a href="<?php echo base_url().'welcome/addmoredetail' ?>">Add More Detail</a>
-                <a href="<?php echo base_url().'welcome/viewregisterdetail' ?>">View Register Detail</a>
-                <a href="<?php echo base_url().'welcome/viewadddetail' ?>">View Add Detail</a>
+                <a href="<?php echo base_url().'welcome/online' ?>">Online</a>
+                <a href="<?php echo base_url().'welcome/resatepassword' ?>">Resat Password </a>
                 <a href="<?php echo base_url().'welcome/logout' ?>">LogOut</a>
 		    </div>
 	    </div>
@@ -31,7 +32,8 @@
 </div>
 
 <div class="main">
-    <div style="margin-bottom: 5%;margin-left: 5%;margin-top: 3%;">
+  <form action="addmoredetailDone.php" method="post">
+    <div class="addmoredetail">
         <label>Nick Name: </label>
         <input type="text" name="nickname" class="form-control" placeholder="Enter Your Nick Name"><br>
         <label>Marital Status: </label>
@@ -47,13 +49,16 @@
            <option>Male</option>
            <option>Female</option>
            </select><br>
+           <label>Date of Birth</label>
+            <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth"><br>
            <label>Hobbyies:</label>
            <input type="text" name="nickname" class="form-control" placeholder="Enter Hobbyies"><br>
            <div class="row">
-                <div class="col-sm-3"><a href="#" class="w3-button w3-round-large">Update</a></div>
+                <div class="col-sm-3"><button type="submit" class="btn btn-default">Submit</button></div>          
                 <div class="col-sm-2"><a href="#" class="w3-button w3-round-large">Back</a></div>
             </div>
     </div>
+  </form>  
 </div>
 </body>
 </html>
