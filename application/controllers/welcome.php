@@ -55,7 +55,18 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('addmoredetail');
 	}
-
+    public function viewregisterdetail()
+    {
+    	$this->load->view('viewregisterdetail');
+    }
+    public function online()
+    {
+    	$this->load->view('online');
+    }
+    public function logout()
+    {
+    	$this->load->view('logout');
+    }
 
 }
 
