@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/codeigniter/';
+$config['base_url'] = 'http://localhost/grandapps/ci_sample_app/';
 
 /*
 |--------------------------------------------------------------------------
