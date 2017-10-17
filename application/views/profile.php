@@ -39,7 +39,7 @@
             <img src="<?php echo base_url().'upload/'.$user_profile[0]->image; ?>" class="image_src">   
         </div></a>
         <br/>
-        <input type="text" value="<?php echo $user_profile[0]->image; ?>" />
+        <span><?php echo $user_profile[0]->image; ?></span>
     	<div class="col-sm-9" >
     	    
     <div class="register_left_margin"><h1>Profile Details</h1></div><br>
