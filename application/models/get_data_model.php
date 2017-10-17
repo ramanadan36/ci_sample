@@ -19,7 +19,7 @@ class Get_data_model extends CI_Model{
 	}
 
 	function get_valid_user($email){
-        $this->db->select('id,password');
+        $this->db->select('id,password,fname');
         $this->db->from('register');
         $this->db->where('email',$email);
         $query = $this->db->get();

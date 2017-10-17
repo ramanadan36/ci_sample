@@ -38,6 +38,8 @@
     	<a href="<?php echo base_url().'welcome/profile_image' ?>"><div class="col-sm-3 image">
             <img src="<?php echo base_url().'upload/'.$user_profile[0]->image; ?>" class="image_src">   
         </div></a>
+        <br/>
+        <input type="text" value="<?php echo $user_profile[0]->image; ?>" />
     	<div class="col-sm-9" >
     	    
     <div class="register_left_margin"><h1>Profile Details</h1></div><br>

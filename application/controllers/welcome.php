@@ -8,7 +8,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('save_data_model');
 		$this->load->model('get_data_model');
 		$this->load->helper('url');
-
+		$this->load->helper('string');
 	}
 
 	public function _login_rule()
@@ -96,6 +96,7 @@ class Welcome extends CI_Controller {
 
 				$sessiondata = array(
 					'user_id' => (int)$valid_fields['id'],
+					'user_name' => $valid_fields['fname'],
 					'logged_in' => 1);
 
 				$this->session->set_userdata($sessiondata);
@@ -195,10 +196,12 @@ class Welcome extends CI_Controller {
     	    $config['max_size'] = 1000;
     	    $config['max_width'] = 1024;
     	    $config['max_height'] = 768;
-    	    $config['encrypt_name'] = TRUE;
+    	    $config['encrypt_name'] = FALSE;
 
     	    $this->load->library('upload', $config);
     	    $this->upload->initialize($config);
+
+    	    $config['file_name'] = $this->session->userdata('user_name').'_'.$this->session->userdata('user_id').'_'.random_string('image',5);
 
     	    if (!$this->upload->do_upload('userfile'))
     	    { 
@@ -230,6 +233,7 @@ class Welcome extends CI_Controller {
 
 			$sessiondata = array(
 					    'user_id' => '',
+					    'user_name' => '',
 					    'logged_in' =>  '');
 		
 	    	$this->session->unset_userdata($sessiondata);
