@@ -1,7 +1,3 @@
-<?php
-	echo phpinfo();
-	exit();
-?>
 <!DOCTYPE html>
 <html>
 <head>
