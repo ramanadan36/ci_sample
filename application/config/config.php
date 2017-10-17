@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://'. $_SERVER['SERVER_ADDR'] .'/';
+$config['base_url'] = 'http://ci.grandappstudio.com/';
 
 /*
 |--------------------------------------------------------------------------
