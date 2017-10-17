@@ -196,7 +196,7 @@ class Welcome extends CI_Controller {
     	    $config['max_size'] = 1000;
     	    $config['max_width'] = 1024;
     	    $config['max_height'] = 768;
-    	    $config['encrypt_name'] = FALSE;
+    	    $config['encrypt_name'] = TRUE;
 
     	    $this->load->library('upload', $config);
     	    $this->upload->initialize($config);
