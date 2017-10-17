@@ -210,6 +210,7 @@ class Welcome extends CI_Controller {
     	   	{
        			$upload_data = $this->upload->data();
        			$file_name = array(
+       				'id' => $this->session->userdata('user_id'),
        				'image' => $upload_data['file_name']);
 
        			$file = $upload_data['file_name'];
