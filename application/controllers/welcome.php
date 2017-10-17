@@ -203,6 +203,7 @@ class Welcome extends CI_Controller {
     	    if (!$this->upload->do_upload('userfile'))
     	    { 
     	        $error = array('error' => $this->upload->display_errors());
+    	        print_r($error);
 				$this->load->view('upload', $error);
     	    }
     	    else
