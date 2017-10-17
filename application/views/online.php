@@ -20,9 +20,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="<?php echo base_url().'welcome/home' ?>">Home</a>
                 <a href="<?php echo base_url().'welcome/profile' ?>">Profile</a>
-                <a href="<?php echo base_url().'welcome/addmoredetail' ?>">Add More Detail</a>
                 <a href="<?php echo base_url().'welcome/online' ?>">Online</a>
-                <a href="<?php echo base_url().'welcome/resatpassword' ?>">Resat Password </a>
                 <a href="<?php echo base_url().'welcome/logout' ?>">LogOut</a>
 		    </div>
 	    </div>
@@ -31,12 +29,33 @@
 
 <div class="main">
     <div class="row">
-    	<div class="col-sm-6">
-            <h2>Welcome</h2>   
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <h1>User Online</h1>
+            </div>
+            <?php
+                foreach($user_online as $user):
+            ?>
+            <div class="col-sm-9">
+                <span>
+                    <?=
+                        $user->fname.' '.$user->lname;
+                    ?>
+                </span>
+            </div>
+            <div class="col-sm-3">
+                <?php
+                    if($user->status == '0'){
+                        echo '<div style="height: 8px;width:8px;background-color: red;margin-top: 4px;"></div>';
+                    } else {
+                        echo '<div style="height: 8px;width:8px;background-color: green;margin-top: 4px;"></div>';
+                    }
+                ?>
+            </div>
+            <?php
+                endforeach;
+            ?>
         </div>
-    	<div class="col-sm-6" >
-    	    
-    	</div>
     </div>
 </div>
 </body>

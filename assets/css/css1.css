@@ -67,7 +67,18 @@
     border-color: green;
 }
 .image{
-    width: 150px;height: 150px; border-style: dashed; margin-left: 3%; margin-top: 1%;margin-bottom: 1%;
+    width: 150px;
+    height: 150px; 
+    border-style: dashed; 
+    margin-left: 3%; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.image_src{
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    margin-left: -14%;
 }
 
 .border

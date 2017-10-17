@@ -20,9 +20,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="<?php echo base_url().'welcome/home' ?>">Home</a>
                 <a href="<?php echo base_url().'welcome/profile' ?>">Profile</a>
-                <a href="<?php echo base_url().'welcome/addmoredetail' ?>">Add More Detail</a>
                 <a href="<?php echo base_url().'welcome/online' ?>">Online</a>
-                <a href="<?php echo base_url().'welcome/resatpassword' ?>">Resat Password </a>
                 <a href="<?php echo base_url().'welcome/logout' ?>">LogOut</a>
 		    </div>
 	    </div>
@@ -31,11 +29,13 @@
 
 <div class="main">
     <div class="row">
-    	<div class="col-sm-6 image"></div>
+    	<div class="col-sm-6 image">
+         <img src="<?php echo base_url().'assets/image/'.$user_data[0]->image; ?>" class="image_src">   
+        </div>
     	<div class="col-sm-6" >
     	    <h2>Welcome</h2>
-    	    <h4>User Mail-ID:</h4>
-    	    <h4>User Name: </h4>
+    	    <h4>User Mail-ID: <?php echo $user_data[0]->email; ?></h4>
+    	    <h4>User Name: <?php echo $user_data[0]->fname." ".$user_data[0]->lname; ?></h4>
     	</div>
     </div>
 </div>
