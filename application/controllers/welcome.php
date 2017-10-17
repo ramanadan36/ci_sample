@@ -209,8 +209,11 @@ class Welcome extends CI_Controller {
     	    else
     	   	{
        			$upload_data = $this->upload->data();
-       			$file_name = $upload_data['file_name'];
-       			$this->save_data_model->update_image($file_name,$this->session->userdata('user_id'));
+       			$file_name = array(
+       				'image' => $upload_data['file_name']);
+
+       			$file = $upload_data['file_name'];
+       			$this->save_data_model->update_image($file_name,$file,$this->session->userdata('user_id'));
        		    $data = array('upload_data' => $this->upload->data());
        	    	redirect(base_url().'welcome/home','refresh');
        		}

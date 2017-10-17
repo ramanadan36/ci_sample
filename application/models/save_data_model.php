@@ -31,12 +31,12 @@ class Save_data_model extends CI_Model
 		$this->db->update('register');
 	}
 
-	function update_image($data,$id){
+	function update_image($data,$file,$id){
 		$update_query = $this->db->get_where('profile', array('id' => $id));
 
 		if($update_query->num_rows > 0)
 		{	
-			$this->db->set('image',$data);
+			$this->db->set('image',$file);
 			$this->db->where('id',$id);
 			$this->db->update('profile');
 
