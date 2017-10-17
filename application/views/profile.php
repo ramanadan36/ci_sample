@@ -36,7 +36,7 @@
 <div class="main">
     <div class="row" style="margin-bottom: 5%;">
     	<a href="<?php echo base_url().'welcome/profile_image' ?>"><div class="col-sm-3 image">
-            <img src="<?php echo base_url().'assets/image/'.$user_profile[0]->image; ?>" class="image_src">   
+            <img src="<?php echo base_url().'upload/'.$user_profile[0]->image; ?>" class="image_src">   
         </div></a>
     	<div class="col-sm-9" >
     	    

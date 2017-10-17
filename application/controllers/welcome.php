@@ -190,7 +190,7 @@ class Welcome extends CI_Controller {
     	$is_logged_in = $this->session->userdata('logged_in');
     	if($is_logged_in == 1){
     		$file = array();
-    		$config['upload_path'] = FCPATH.'assets/image/';
+    		$config['upload_path'] = './upload/';
     	    $config['allowed_types'] = 'gif|jpg|png';
     	    $config['max_size'] = 1000;
     	    $config['max_width'] = 1024;

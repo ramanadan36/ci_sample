@@ -30,7 +30,7 @@
 <div class="main">
     <div class="row">
     	<div class="col-sm-6 image">
-         <img src="<?php echo base_url().'assets/image/'.$user_data[0]->image; ?>" class="image_src">   
+         <img src="<?php echo base_url().'upload/'.$user_data[0]->image; ?>" class="image_src">   
         </div>
     	<div class="col-sm-6" >
     	    <h2>Welcome</h2>
