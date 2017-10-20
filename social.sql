@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 17, 2017 at 10:38 AM
+-- Generation Time: Oct 20, 2017 at 06:49 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -43,7 +43,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `nickname`, `gender`, `email`, `image`, `relation`, `hobbies`) VALUES
-(2, 'hello', 1, 'saurabh@gmail.com', '6c7bfc11bf3b63931c51476daa3bff1f.jpg', '1', 'computer games');
+(2, 'hello', 1, 'saurabh@gmail.com', '483fa168cc4b3b425335f20de4b28575.jpg', '1', 'computer games');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,28 @@ CREATE TABLE `register` (
 
 INSERT INTO `register` (`id`, `fname`, `lname`, `mobile`, `email`, `password`, `status`) VALUES
 (1, 'irfan', 'khan', '9929496923', 'irfan@gmail.com', '123456', 0),
-(2, 'saurabh ghaur', 'gaur', '7899567517', 'gaur@gmail.com', '123456', 0);
+(2, 'saurabh ghaur', 'gaur', '7899567517', 'gaur@gmail.com', '123456', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `session_table`
+--
+
+CREATE TABLE `session_table` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(45) NOT NULL DEFAULT '0',
+  `user_agent` varchar(120) NOT NULL,
+  `last_activity` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `user_data` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `session_table`
+--
+
+INSERT INTO `session_table` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+('6257f79c4233fabdd4508414584c9909', '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 1508473995, '');
 
 --
 -- Indexes for dumped tables
@@ -78,6 +99,12 @@ INSERT INTO `register` (`id`, `fname`, `lname`, `mobile`, `email`, `password`, `
 --
 ALTER TABLE `register`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `session_table`
+--
+ALTER TABLE `session_table`
+  ADD PRIMARY KEY (`session_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
