@@ -7,6 +7,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->model('save_data_model');
 		$this->load->model('get_data_model');
+		$this->load->library('session');
 		$this->load->helper('url');
 		$this->load->helper('string');
 	}
@@ -112,7 +113,11 @@ class Welcome extends CI_Controller {
 	{
 		$data = array();
 		$is_logged_in = $this->session->userdata('logged_in');
-		
+		$my_session_variable = $this->session->all_userdata();
+
+		echo $this->session->userdata('user_id');
+		//echo "<pre>";
+		print_r($my_session_variable);
 		if($is_logged_in == 1) {
 			$data['user_data'] = $this->get_data_model->user_value($this->session->userdata('user_id'));
 			$this->load->view('home',$data);		

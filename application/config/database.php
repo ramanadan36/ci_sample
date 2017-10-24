@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'socialnetwork';
-$db['default']['password'] = 'socialnetwork';
+$db['default']['username'] = 'social';
+$db['default']['password'] = 'social';
 $db['default']['database'] = 'social';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
